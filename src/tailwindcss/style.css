@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+.sidebar {
+  position: relative;
+  width: 220px;
+  overflow: hidden; /* Hide scrollbars */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.poster {
+  @apply relative;
+  height: 498px;
+  background-size: cover;
+  background-image: url("assets/poster.jpg");
+  width: 100%;
+  border-radius: 10px;
+}
+.header-text {
+  width: 60%;
+}
+
+.top-trend {
+  @apply mt-5;
+}
+
+.wrapper {
+  overflow-x: auto;
+}
+.wrapper::-webkit-scrollbar {
+  width: 0;
+}
+.game-main:hover .card-overlay {
+  background: none !important;
+}
+.animation-card {
+  transition: all 0.8s ease-in-out;
+}
+.animation-card:hover {
+  transation-duration: 1s;
+
+  transform: scale(1.1);
+}
+.animation-card:hover .character {
+  transation-duration: 1s;
+
+  bottom: 3rem;
+}
+
+.animation-streamers {
+  transation-duration: 0.8s;
+}
+.animation-streamers:hover {
+  transform: skewY(10deg);
+  box-shadow: 5px 10px #6d5dd2;
+}

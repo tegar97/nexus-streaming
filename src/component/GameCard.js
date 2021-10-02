@@ -1,0 +1,33 @@
+import React from "react";
+import { ReactComponent as Play } from "assets/play.svg";
+
+function GameCard({ imageBackground, image, totalStream, title }) {
+  return (
+    <div
+      className="relative px-5 mr-12 cursor-pointer animation-card group "
+      style={{
+        background: `url(${imageBackground})`,
+        height: "180px",
+        borderRadius: "35px",
+        width: "277.25px",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="absolute flex flex-col bottom-6">
+        <Play className="mb-2" />
+        <span className="font-bold text-white " style={{ fontSize: "18px" }}>
+          {title}
+        </span>
+        <span className="text-sm font-light text-white ">
+          {totalStream} Streamers
+        </span>
+      </div>
+
+      <div className="absolute right-0 duration-500 bottom-5 character group-hover:bottom-10">
+        <img src={image} />
+      </div>
+    </div>
+  );
+}
+
+export default GameCard;
