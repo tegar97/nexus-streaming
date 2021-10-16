@@ -6,7 +6,7 @@ import { ReactComponent as Eyes } from "assets/eyes.svg";
 import { ReactComponent as Back } from "assets/back.svg";
 import CategoryGameCard from "component/CategoryGameCard";
 import { Link } from "react-router-dom";
-function CategoryMobile() {
+function CategoryMobile({ gameData }) {
   return (
     <div className="w-full h-full bg-black-500">
       <section>
@@ -21,12 +21,11 @@ function CategoryMobile() {
             className="video-contentMobile"
             muted
             loop
+            src={gameData.videoAnimation}
             style={{
               backgroundClip: "polygon(0 0, 100% 0%, 100% 92%, 0% 100%)",
             }}
-          >
-            <source src={Video} type="video/mp4" />
-          </video>
+          ></video>
 
           <div className="absolute top-0 left-0 z-10 w-full h-full opacity-60 bottom-0-right-0 bg-black-500"></div>
           <div
@@ -62,7 +61,7 @@ function CategoryMobile() {
               </li>
             </ul>
             <h1 className="font-bold text-white" style={{ fontSize: "35px" }}>
-              Genshin Impact
+              {gameData.title}
             </h1>
             <div>
               <ul className="flex flex-row">

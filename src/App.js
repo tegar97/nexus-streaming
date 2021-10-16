@@ -7,6 +7,8 @@ import SearchResult from "Pages/SearchResult/SearchResult";
 import VideoDetail from "Pages/video-detail/video-detail";
 import Channels from "Pages/Channels/Channels";
 import ScrollTop from "helper/ScrollTop";
+import AllGames from "Pages/AllGames/AllGame";
+import Trending from "Pages/Trending/Trending";
 function App() {
   return (
     <Router>
@@ -18,8 +20,14 @@ function App() {
         <Route path="/video/:id">
           <VideoDetail />
         </Route>
-        <Route path="/category/:slug">
+        <Route path="/games">
+          <AllGames />
+        </Route>
+        <Route path="/game/:slug">
           <Category />
+        </Route>
+        <Route path="/trending">
+          <Trending />
         </Route>
         <Route path="/channels/:slug">
           <Channels />

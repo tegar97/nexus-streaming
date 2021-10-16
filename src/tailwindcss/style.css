@@ -100,9 +100,7 @@
   background-size: cover;
   height: 498px;
   width: 100%;
-  background: url("assets/dummy_category_poster.jpg");
   background-position: center;
-  clip-path: polygon(0 0, 100% 0%, 100% 92%, 0% 100%);
   background-repeat: no-repeat;
 }
 

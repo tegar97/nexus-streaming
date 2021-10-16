@@ -8,7 +8,11 @@ import { ReactComponent as Collapse } from "assets/collapse.svg";
 import { ReactComponent as Open } from "assets/uncollapse.svg";
 import Logo2 from "assets/logo.png";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+
 function SideBar({ isMinimaze, minimazeSideBarFunction }) {
+  const location = useLocation();
+
   const maxSize = () => {
     return (
       <div className="flex flex-col px-5 py-5 duration-200 ease-in-out ">
@@ -34,18 +38,51 @@ function SideBar({ isMinimaze, minimazeSideBarFunction }) {
 
         <div className="flex mt-10 ">
           <ul>
+            <Link to="/">
+              <li
+                className={`flex flex-row items-center  ${
+                  location.pathname === "/" && "bg-purple-600 px-2 py-1"
+                }  rounded-md cursor-pointer `}
+                style={{ width: "184px" }}
+              >
+                <Home
+                  className={
+                    location.pathname === "/" ? "fill-white" : "fill-gray-400"
+                  }
+                />
+                <span
+                  className={`ml-4 ${
+                    location.pathname === "/" ? "text-white" : "text-gray-400"
+                  } duration-200 transation hover:text-white`}
+                >
+                  Home
+                </span>
+              </li>
+            </Link>
             <li
-              className="flex flex-row items-center px-2 py-1 bg-purple-600 rounded-md cursor-pointer"
-              style={{ width: "184px" }}
+              style={{ marginTop: "26px" }}
+              className={`flex flex-row items-center  ${
+                location.pathname === "/trending" && "bg-purple-600 px-2 py-1 "
+              }  rounded-md cursor-pointer `}
             >
-              <Home className="fill-white" />
-              <span className="ml-3 text-white">Home</span>
-            </li>
-            <li style={{ marginTop: "26px" }} className="flex cursor-pointer ">
-              <Trending className=" fill-gray-400" />
-              <span className="ml-4 text-gray-400 duration-200 transation hover:text-white">
-                Trending
-              </span>
+              <Trending
+                className={
+                  location.pathname === "/trending"
+                    ? "fill-white"
+                    : "fill-gray-400"
+                }
+              />
+              <Link to="/trending">
+                <span
+                  className={`ml-4 ${
+                    location.pathname === "/trending"
+                      ? "text-white"
+                      : "text-gray-400"
+                  } duration-200 transation hover:text-white`}
+                >
+                  Trending
+                </span>
+              </Link>
             </li>
             <li style={{ marginTop: "26px" }} className="flex cursor-pointer ">
               <User className=" fill-gray-400" />

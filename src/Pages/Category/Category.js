@@ -13,11 +13,22 @@ import CategoryHeader from "component/CategoryHeader";
 import StreamingThumbnail from "component/StreamingThumbnail";
 import { useMediaQuery } from "react-responsive";
 import CategoryMobile from "./CategoryMobile";
+import { useParams } from "react-router";
+import gamesData from "dummy/games.json";
 function Category() {
+  const [gameData, setGameData] = useState([]);
   const navRef = useRef(null);
   const [isMinimaze, setIsMinimaze] = React.useState(220);
   const [active, seteActive] = useState(false);
+  const { slug } = useParams();
+
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  useEffect(() => {
+    const getData = gamesData.filter((data) => {
+      return data.slug === slug;
+    });
+    setGameData(getData[0]);
+  }, [slug]);
 
   const minimazeSideBarFunction = (data) => {
     setIsMinimaze(data);
@@ -53,7 +64,7 @@ function Category() {
     window.addEventListener("scroll", hideNavbar);
   }, [active]);
 
-  if (isTabletOrMobile) return <CategoryMobile />;
+  if (isTabletOrMobile) return <CategoryMobile gameData={gameData} />;
   return (
     <div className="relative flex overflow-hidden bg-black-500">
       <div className="div" style={{ width: isMinimaze }}></div>
@@ -70,7 +81,13 @@ function Category() {
       <div className="flex-1 ">
         <main className="w-full ">
           {active && <Navbar />}
-          <CategoryHeader />
+          <CategoryHeader
+            title={gameData.title}
+            description={gameData.description}
+            videoUrl={gameData.videoAnimation}
+            background={gameData.background}
+          />
+          )
           <section className="px-5 mt-10" data-aos="fade-up">
             <div className="flex flex-col ">
               <span className="text-xl font-bold text-white">
@@ -99,7 +116,6 @@ function Category() {
               />
             </div>
           </section>
-
           <div className="div" style={{ height: "200px" }}></div>
         </main>
       </div>

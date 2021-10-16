@@ -11,6 +11,7 @@ import MrBeast from "assets/mrBeast.png";
 import Thumbnail from "assets/thum2.jpg";
 import Bakreyon from "assets/bakreyon.png";
 import { useMediaQuery } from "react-responsive";
+import DataGames from "dummy/games.json";
 
 import React, { createRef, useRef } from "react";
 import TopStreamerCard from "component/TopStreamerCard";
@@ -23,6 +24,7 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import Carousel from "component/Carousel";
 import HomeMobileVersion from "./HomeMobileVersion";
+import GamesCard from "component/GamesCard";
 function Home() {
   const navRef = useRef(null);
   const [isMinimaze, setIsMinimaze] = React.useState(220);
@@ -101,21 +103,25 @@ function Home() {
                 image={Phonix}
                 title={"Valorant"}
                 totalStream={125}
+                slug={"/game/valorant"}
               />
               <GameCard
                 imageBackground={"assets/FF.png"}
                 image={Caroline}
                 title={"Free Fire"}
                 totalStream={100}
+                slug={"/game/free-fire"}
               />
               <GameCard
                 imageBackground={"assets/geinshin.png"}
                 image={Baal}
+                slug={"/game/genshin-impact"}
                 title={"Geinshin Impact"}
                 totalStream={95}
               />
             </div>
           </section>
+
           <section className="px-5 mt-10" data-aos="fade-left">
             <div className="flex flex-row ">
               <span className="text-xl font-bold text-white">
@@ -147,6 +153,7 @@ function Home() {
               />
             </div>
           </section>
+
           <section className="px-5 mt-10" data-aos="fade-up">
             <div className="flex flex-row ">
               <span className="text-xl font-bold text-white">
@@ -170,6 +177,27 @@ function Home() {
             </div>
             <div className="mt-10 ">
               <MostWatchGameBanner />
+            </div>
+          </section>
+          <section className="px-5 mt-20" data-aos="fade-up">
+            <div className="flex flex-row ">
+              <span className="text-xl font-bold text-white">Random Games</span>
+            </div>
+            <div
+              className="flex w-full mt-5 "
+              data-aos="fade-right"
+              ref={navRef}
+            >
+              <div className="grid grid-cols-5 gap-5">
+                {DataGames.map((data) => (
+                  <GamesCard
+                    slug={data.slug}
+                    streamersCount={data.streamersCount}
+                    title={data.title}
+                    image={data.poster}
+                  />
+                ))}
+              </div>
             </div>
           </section>
           <section></section>

@@ -1,11 +1,11 @@
 import React from "react";
 import { ReactComponent as Play } from "assets/play.svg";
 import { Link } from "react-router-dom";
-function GameCard({ imageBackground, image, totalStream, title }) {
+function GameCard({ imageBackground, image, totalStream, title, slug }) {
   return (
-    <Link to="/category/2">
+    <Link to={`${slug}`}>
       <div
-        className="relative px-5 mr-12 cursor-pointer animation-card group "
+        className="relative px-5 mr-12 duration-500 cursor-pointer animation-card group"
         style={{
           background: `url(${imageBackground})`,
           height: "180px",

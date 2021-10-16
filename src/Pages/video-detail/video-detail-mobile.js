@@ -4,8 +4,6 @@ import ReactPlayer from "react-player";
 import { useMediaQuery } from "react-responsive";
 
 function VideoDetailMobile() {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
-
   return (
     <div className="h-screen bg-black-500">
       <div className="relative flex flex-col">
