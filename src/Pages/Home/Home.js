@@ -1,7 +1,6 @@
 import GameCard from "component/GameCard";
 import Navbar from "component/Navbar";
 import SideBar from "component/SideBar";
-import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 import Phonix from "assets/phonex-valo.png";
 import Caroline from "assets/caroline1.png";
 import Baal from "assets/baal.png";
@@ -11,14 +10,40 @@ import Ninja from "assets/ninja.png";
 import MrBeast from "assets/mrBeast.png";
 import Thumbnail from "assets/thum2.jpg";
 import Bakreyon from "assets/bakreyon.png";
+import { useMediaQuery } from "react-responsive";
 
 import React, { createRef, useRef } from "react";
 import TopStreamerCard from "component/TopStreamerCard";
 import StreamingThumbnail from "component/StreamingThumbnail";
 import MostWatchGameBanner from "component/MostWatchGameBanner";
+import Slider from "react-slick";
+
+import "aos/dist/aos.css";
+
+import AOS from "aos";
+import Carousel from "component/Carousel";
+import HomeMobileVersion from "./HomeMobileVersion";
 function Home() {
   const navRef = useRef(null);
+  const [isMinimaze, setIsMinimaze] = React.useState(220);
 
+  const minimazeSideBarFunction = (data) => {
+    setIsMinimaze(data);
+  };
+
+  const RightRef = useRef(null);
+
+  React.useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+  };
   const handleNav = (direction) => {
     if (direction === "left") {
       // eslint-disable-next-line no-unused-expressions
@@ -32,40 +57,31 @@ function Home() {
   const scroll = (scrollOffset) => {
     navRef.current.scrollLeft += scrollOffset;
   };
-  return (
-    <div className="relative flex bg-black-500">
-      <div className="div" style={{ width: 220 }}></div>
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
-      <div className="fixed z-50 bg-black-500" style={{ width: 220 }}>
-        <SideBar />
+  if (isTabletOrMobile) return <HomeMobileVersion />;
+  return (
+    <div className="relative flex overflow-hidden bg-black-500">
+      <div className="div" style={{ width: isMinimaze }}></div>
+
+      <div
+        className="fixed z-50 duration-500 ease-in-out bg-black-500"
+        style={{ width: isMinimaze }}
+      >
+        <SideBar
+          isMinimaze={isMinimaze}
+          minimazeSideBarFunction={minimazeSideBarFunction}
+        />
       </div>
       <div className="flex-1">
         <div
           style={{ height: 63 }}
-          className="flex items-center px-2 py-2 border-b-2 border-gray-700 navbar "
+          className="fixed z-20 flex items-center flex-1 w-screen px-2 py-2 border-b-2 border-gray-700 bg-black-500 "
         >
-          <Navbar />
+          <Navbar isMinimaze={isMinimaze} />
         </div>
         <main className="px-2 mt-2 ">
-          <div className="relative w-full poster">
-            <div className="absolute header-text bottom-20 left-5">
-              <h1
-                className="text-xl font-bold text-white "
-                style={{
-                  fontSize: "35px",
-                  letterSpacing: "1px",
-                  lineHeight: "50px",
-                }}
-              >
-                Gambit Vs Team Envy - Valorant Master: Berlin - Finals Map
-              </h1>
-              <div className="mt-2">
-                <button className="px-5 py-2 text-white bg-purple-600 rounded-md hover:bg-purple-700">
-                  Watch Now{" "}
-                </button>
-              </div>
-            </div>
-          </div>
+          <Carousel />
 
           <section className="px-5 mt-10">
             <div className="flex flex-row ">
@@ -75,7 +91,11 @@ function Home() {
               <div></div>
             </div>
 
-            <div className="flex w-full mt-20 " ref={navRef}>
+            <div
+              className="flex w-full mt-20 "
+              data-aos="fade-right"
+              ref={navRef}
+            >
               <GameCard
                 imageBackground={"assets/valorant.png"}
                 image={Phonix}
@@ -96,7 +116,7 @@ function Home() {
               />
             </div>
           </section>
-          <section className="px-5 mt-10">
+          <section className="px-5 mt-10" data-aos="fade-left">
             <div className="flex flex-row ">
               <span className="text-xl font-bold text-white">
                 Top Streamers
@@ -127,7 +147,7 @@ function Home() {
               />
             </div>
           </section>
-          <section className="px-5 mt-10">
+          <section className="px-5 mt-10" data-aos="fade-up">
             <div className="flex flex-row ">
               <span className="text-xl font-bold text-white">
                 Live Stream Now
@@ -142,7 +162,7 @@ function Home() {
               />
             </div>
           </section>
-          <section className="px-5 mt-10">
+          <section className="px-5 mt-10" data-aos="fade-up">
             <div className="flex flex-row ">
               <span className="text-xl font-bold text-white">
                 Live Stream Now
@@ -152,6 +172,7 @@ function Home() {
               <MostWatchGameBanner />
             </div>
           </section>
+          <section></section>
           <section className="h-20"></section>
         </main>
       </div>

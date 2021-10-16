@@ -3,7 +3,7 @@ import React from "react";
 function PopulerGameCard({ gameImage, StreamersOnline, title }) {
   return (
     <div
-      className="flex flex-row items-center duration-200 rounded-md cursor-pointer mb-14 "
+      className="flex flex-row items-center duration-500 rounded-md cursor-pointer mb-14 animation-gamecard "
       style={{
         background: "#272734",
         boxShadow: "0px 4px 21px rgba(0, 0, 0, 0.25)",

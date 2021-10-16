@@ -274,7 +274,7 @@ module.exports = {
       DEFAULT: "1",
     },
     fontFamily: {
-      sans: ["Poppins"],
+      sans: ["Poppins", "Roboto"],
       serif: [
         "ui-serif",
         "Georgia",
