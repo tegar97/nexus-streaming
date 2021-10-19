@@ -9,6 +9,7 @@ import "aos/dist/aos.css";
 import DataGames from "dummy/games.json";
 import AOS from "aos";
 import GamesCard from "component/GamesCard";
+import AllGamesMobile from "./AllGamesMobile";
 
 function AllGames() {
   const navRef = useRef(null);
@@ -43,7 +44,7 @@ function AllGames() {
 
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
-  if (isTabletOrMobile) return <p>mobile</p>;
+  if (isTabletOrMobile) return <AllGamesMobile />;
   return (
     <div className="relative flex h-screen overflow-hidden bg-black-500">
       <div className="div" style={{ width: isMinimaze }}></div>

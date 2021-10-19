@@ -10,10 +10,12 @@ import StreamersFelix from "assets/felix.png";
 import StreamersNinja from "assets/ninja.png";
 import StreamingThumbnailMobile from "component/StreamingThumbnailMobile";
 import Bakreyon from "assets/bakreyon.png";
+import NavbarMobile from "component/NavbarMobile";
 
 function HomeMobileVersion() {
   return (
-    <div className="h-full px-3 py-5 overflow-hidden bg-black-500">
+    <div className="relative h-full px-3 py-5 overflow-hidden bg-black-500">
+      <NavbarMobile />
       <section>
         <h1 className="text-2xl font-bold text-white">Discover</h1>
         <input

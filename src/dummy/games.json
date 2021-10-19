@@ -6,7 +6,8 @@
         "category" :"Mobile",
         "description" : "Genshin Impact adalah permainan free-to-play action RPG dunia terbuka yang dikembangkan oleh miHoYo. Game ini dirilis pada tanggal 28 September 2020 di platform Android, iOS, Windows, dan PlayStation 4, serta 28 April 2021 di platform PlayStation 5 Follow",
         "streamersCount"  :1525,
-        "videoAnimation" : "/assets/raiden_animation.mp4"
+        "videoAnimation" : "/assets/raiden_animation.mp4",
+        "genre" : ["Action","Adventure"]
 
     
     },
@@ -17,8 +18,9 @@
         "streamersCount"  : 1424,
         "category" :"Mobile",
         "background" : "https://gamebrott.com/wp-content/uploads/2019/08/015.jpg",
-        "description" : "Garena Free Fire atau biasa disebut Free Fire adalah permainan battle royale yang dikembangkan oleh 111 Dots Studio dan diterbitkan oleh Garena untuk Android dan iOS. Itu menjadi permainan seluler yang paling banyak diunduh secara global pada tahun 2019."
-       
+        "description" : "Garena Free Fire atau biasa disebut Free Fire adalah permainan battle royale yang dikembangkan oleh 111 Dots Studio dan diterbitkan oleh Garena untuk Android dan iOS. Itu menjadi permainan seluler yang paling banyak diunduh secara global pada tahun 2019.",
+        "genre" : ["Action","Battle royale","War"]
+
     },
     {
         "title" : "Valorant",
@@ -27,7 +29,9 @@
         "streamersCount"  : 1100,
         "category" :"PC",
         "description" : "Valorant adalah penembak pahlawan orang pertama taktis multipemain gratis untuk dimainkan yang dikembangkan dan diterbitkan oleh Riot Games, untuk Microsoft Windows",
-        "videoAnimation" : "/assets/valorant-animation.mp4"
+        "videoAnimation" : "/assets/valorant-animation.mp4",
+        "genre" : ["Fps","War"]
+
        
     },
     {
@@ -37,7 +41,9 @@
         "streamersCount"  : 1099,
         "category" :"PC",
         "description" : "League of Legends adalah sebuah permainan video arena pertarungan daring multipemain yang dikembangkan dan dipublikasikan oleh Riot Games untuk Microsoft Windows dan macOS. Permainan tersebut terinspirasi oleh Warcraft III: The Frozen Throne dari seri Defense of the Ancients.",
-        "videoAnimation" : "/assets/league-of-legends-animation.mp4"
+        "videoAnimation" : "/assets/league-of-legends-animation.mp4",
+        "genre" : ["Moba"]
+
        
     },
     {
@@ -46,8 +52,10 @@
         "poster" : "https://img.nimo.tv/o/banner/D126C9C813178A85B313B491F29E6632_7f2de02df66074f3dbe5978b66a82158.png/w500_l0/img.webpp",
         "streamersCount"  : 1099,
         "category" :"Mobile",
-        "description" : "Mobile Legends: Bang Bang adalah sebuah permainan peranti bergerak berjenis MOBA yang dikembangkan dan diterbitkan oleh Moonton, anak usaha dari ByteDance",
-        "videoAnimation" : "/assets/mlbb-animation.mp4"
+        "description" : "Mobile Legends: Bang Bang adalah sebuah permainan peranti bergerak berjenis Moba yang dikembangkan dan diterbitkan oleh Moonton, anak usaha dari ByteDance",
+        "videoAnimation" : "/assets/mlbb-animation.mp4",
+        "genre" : ["MOBA"]
+
        
     }
 ]
