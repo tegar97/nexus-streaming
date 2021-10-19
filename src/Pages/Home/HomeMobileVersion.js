@@ -37,6 +37,7 @@ function HomeMobileVersion() {
             imageBackground={"assets/poster.jpg"}
             image={Phonix}
             title={"Valorant"}
+            slug="valorant"
             totalStream={"1.5k"}
             bgColor={"#EF9636"}
           />
@@ -44,6 +45,7 @@ function HomeMobileVersion() {
             imageBackground={"assets/fornite_bg.jpg"}
             image={ForniteCharacter}
             title={"Fornite"}
+            slug="fornite"
             totalStream={"1k"}
             bgColor={"#2596BE"}
           />
@@ -51,6 +53,7 @@ function HomeMobileVersion() {
             imageBackground={"assets/geinshin_bg.jpg"}
             image={BaalCharacter}
             title={"Geinshin Impact"}
+            slug="genshin-impact"
             totalStream={800}
             bgColor={"#4F3792"}
           />
@@ -58,6 +61,7 @@ function HomeMobileVersion() {
             imageBackground={"assets/warzone_bg.jpg"}
             image={WarZoneCharacter}
             title={"Warzone"}
+            slug="warzone"
             totalStream={452}
             bgColor={"#866445"}
           />

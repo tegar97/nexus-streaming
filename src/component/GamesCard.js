@@ -13,14 +13,19 @@ function GamesCard({ title, streamersCount, image, slug }) {
           />
           <div
             className="absolute z-20 text-center opacity-0 group-hover:opacity-100"
-            style={{ top: "170px" }}
+            style={{ top: "120px" }}
           >
-            <span className="text-lg text-white">
-              {streamersCount} Streamers Online
-            </span>
-            <button className="px-2 py-2 mt-2 text-white bg-purple-600">
-              Watch Now
-            </button>
+            <div className="flex flex-col items-center">
+              <span className="text-lg text-white">
+                {streamersCount} Streamers Online
+              </span>
+              <button
+                className="px-1 py-1 mt-2 text-center text-white bg-purple-600 "
+                style={{ width: "56%" }}
+              >
+                Watch Now
+              </button>
+            </div>
           </div>
           <div className="absolute top-0 bottom-0 left-0 right-0 w-full h-full opacity-0 group-hover:opacity-80 bg-black-500"></div>
         </figure>

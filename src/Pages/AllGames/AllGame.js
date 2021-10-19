@@ -20,28 +20,10 @@ function AllGames() {
     setIsMinimaze(data);
   };
 
-  const RightRef = useRef(null);
-
   React.useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-  };
-  const handleNav = (direction) => {
-    if (direction === "left") {
-      // eslint-disable-next-line no-unused-expressions
-      navRef ? (navRef.current.scrollLeft -= 200) : null;
-    } else {
-      // eslint-disable-next-line no-unused-expressions
-      navRef ? (navRef.current.scrollLeft += 200) : null;
-    }
-  };
 
   useEffect(() => {
     setGames(DataGames);
@@ -59,9 +41,6 @@ function AllGames() {
     setCategory(category);
   };
 
-  const scroll = (scrollOffset) => {
-    navRef.current.scrollLeft += scrollOffset;
-  };
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   if (isTabletOrMobile) return <p>mobile</p>;

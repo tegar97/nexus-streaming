@@ -101,6 +101,7 @@ function VideoDetail() {
                         height: "69px",
                         borderRadius: "100%",
                       }}
+                      alt="Profile Photo"
                       className="border-2 border-purple-600 "
                     />
                     <div

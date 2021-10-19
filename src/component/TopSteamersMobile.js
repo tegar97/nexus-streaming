@@ -10,7 +10,11 @@ function TopSteamersMobile({ profileImage, name, followersTotal }) {
         borderRadius: "8px",
       }}
     >
-      <img style={{ width: "77px", height: "77px" }} src={profileImage} />
+      <img
+        style={{ width: "77px", height: "77px" }}
+        src={profileImage}
+        alt="Profile Image"
+      />
       <span
         className="mt-2 text-white "
         style={{ fontWeight: "600", fontSize: "16px" }}

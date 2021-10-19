@@ -3,7 +3,7 @@ import { ReactComponent as Views } from "assets/eyes2.svg";
 import { ReactComponent as Likes } from "assets/likes.svg";
 import DummyPhoto from "assets/valorant-logo.png";
 import { Link } from "react-router-dom";
-function TrendingCard() {
+function TrendingCard({ title, views, likes, channelsLogo, channelsName }) {
   return (
     <Link to="/video/1">
       <div

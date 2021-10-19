@@ -1,4 +1,5 @@
 import React from "react";
+import ModalAuth from "./ModalLogin";
 
 function Navbar({ isMinimaze }) {
   return (
@@ -12,12 +13,8 @@ function Navbar({ isMinimaze }) {
         placeholder="Search"
       />
       <div>
-        <button className="px-2 py-2 mr-5 text-white bg-gray-600 rounded-md">
-          Login
-        </button>
-        <button className="px-2 py-2 text-white bg-purple-600 rounded-md">
-          Register
-        </button>
+        <ModalAuth type="login" />
+        <ModalAuth type="register" />
       </div>
     </div>
   );

@@ -15,6 +15,7 @@ function ChannelsMobile() {
               <img
                 src={DummyLogo}
                 className="-mt-5"
+                alt="Photo Profile"
                 style={{ width: "85px", height: "85px" }}
               />
               <div className="flex flex-col mt-1 ml-5">

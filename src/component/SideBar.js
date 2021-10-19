@@ -3,6 +3,7 @@ import { ReactComponent as Logo } from "assets/Logo.svg";
 import { ReactComponent as Home } from "assets/home.svg";
 import { ReactComponent as Trending } from "assets/trending.svg";
 import { ReactComponent as User } from "assets/user.svg";
+import { ReactComponent as Games } from "assets/games.svg";
 import { ReactComponent as Video } from "assets/video.svg";
 import { ReactComponent as Collapse } from "assets/collapse.svg";
 import { ReactComponent as Open } from "assets/uncollapse.svg";
@@ -28,10 +29,7 @@ function SideBar({ isMinimaze, minimazeSideBarFunction }) {
             </div>
           </Link>
 
-          <button
-            className="ml-5 text-white"
-            onClick={() => minimazeSideBarFunction(50)}
-          >
+          <button className="ml-5 " onClick={() => minimazeSideBarFunction(50)}>
             <Collapse />
           </button>
         </div>
@@ -50,12 +48,39 @@ function SideBar({ isMinimaze, minimazeSideBarFunction }) {
                     location.pathname === "/" ? "fill-white" : "fill-gray-400"
                   }
                 />
+
                 <span
                   className={`ml-4 ${
                     location.pathname === "/" ? "text-white" : "text-gray-400"
                   } duration-200 transation hover:text-white`}
                 >
                   Home
+                </span>
+              </li>
+            </Link>
+            <Link to="/games">
+              <li
+                className={`flex flex-row items-center  ${
+                  location.pathname === "/games" && "bg-purple-600 px-2 py-1"
+                }  rounded-md cursor-pointer `}
+                style={{ marginTop: "24px" }}
+              >
+                <Games
+                  className={
+                    location.pathname === "/games"
+                      ? "fill-white"
+                      : "fill-gray-400"
+                  }
+                />
+
+                <span
+                  className={`ml-4 ${
+                    location.pathname === "/games"
+                      ? "text-white"
+                      : "text-gray-400"
+                  } duration-200 transation hover:text-white`}
+                >
+                  Games
                 </span>
               </li>
             </Link>

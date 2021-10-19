@@ -11,6 +11,7 @@ function ChatMessage({ message, name, profile }) {
         <img
           src={profile}
           style={{ width: "25px", height: "25px", borderRadius: "100%" }}
+          alt="profile photo"
         />
       )}
       <div className="flex flex-row items-center ml-2 just">

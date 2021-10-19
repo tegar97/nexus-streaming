@@ -8,9 +8,10 @@ function GameCardMobileVersion({
   totalStream,
   title,
   bgColor,
+  slug,
 }) {
   return (
-    <Link to="/category/genshin">
+    <Link to={`/game/${slug}`}>
       <div
         className="relative w-full px-5 mr-3 cursor-pointer animation-card group "
         style={{

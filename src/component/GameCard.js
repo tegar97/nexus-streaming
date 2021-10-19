@@ -25,7 +25,7 @@ function GameCard({ imageBackground, image, totalStream, title, slug }) {
         </div>
 
         <div className="absolute right-0 duration-500 bottom-5 character group-hover:bottom-10">
-          <img src={image} />
+          <img src={image} alt="Character Animation" />
         </div>
       </div>
     </Link>

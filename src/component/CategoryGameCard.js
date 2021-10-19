@@ -8,6 +8,7 @@ function CategoryGameCard() {
       <img
         style={{ width: "150px", height: "100px", borderRadius: "8px" }}
         src={DummyPoster}
+        alt="Category Game Card"
       />
       <div className="flex flex-col ml-3">
         <h3 className="font-bold text-white" style={{ fontSize: "14px" }}>
@@ -23,6 +24,7 @@ function CategoryGameCard() {
           <img
             src={Bakreyon}
             style={{ width: "25px", height: "25px", borderRadius: "100%" }}
+            alt="thumb dummy"
           />
           <span className="ml-2 text-sm " style={{ color: "#BABABA" }}>
             Bakreyon

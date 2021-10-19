@@ -18,7 +18,7 @@ import TopStreamerCard from "component/TopStreamerCard";
 import StreamingThumbnail from "component/StreamingThumbnail";
 import MostWatchGameBanner from "component/MostWatchGameBanner";
 import Slider from "react-slick";
-
+import { Link } from "react-router-dom";
 import "aos/dist/aos.css";
 
 import AOS from "aos";
@@ -180,8 +180,13 @@ function Home() {
             </div>
           </section>
           <section className="px-5 mt-20" data-aos="fade-up">
-            <div className="flex flex-row ">
+            <div className="flex flex-row items-center justify-between">
               <span className="text-xl font-bold text-white">Random Games</span>
+              <Link to="/games">
+                <span className="text-purple-600 cursor-pointer hover:text-purple-700 ">
+                  More
+                </span>
+              </Link>
             </div>
             <div
               className="flex w-full mt-5 "
