@@ -11,6 +11,7 @@ import AOS from "aos";
 import GamesCard from "component/GamesCard";
 import TrendingCard from "component/TrendingCard";
 import { Link } from "react-router-dom";
+import TrendingMobile from "./TrendingMobile";
 function Trending() {
   const navRef = useRef(null);
   const [isMinimaze, setIsMinimaze] = React.useState(220);
@@ -44,7 +45,7 @@ function Trending() {
 
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
-  if (isTabletOrMobile) return <p>mobile</p>;
+  if (isTabletOrMobile) return <TrendingMobile />;
   return (
     <div className="relative flex h-screen overflow-hidden bg-black-500">
       <div className="div" style={{ width: isMinimaze }}></div>

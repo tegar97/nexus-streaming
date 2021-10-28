@@ -66,7 +66,7 @@ const ModalAuth = ({ type }) => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <div className="flex flex-col w-full px-5 py-2 bg-black-500">
+        <div className="flex flex-col w-full px-5 py-5 bg-black-500">
           <div className="flex flex-row items-center justify-center w-full mt-5 ">
             <img
               src={Logo2}

@@ -20,6 +20,7 @@ function StreamingThumbnailMobile({ imageBackground, streamersPhoto }) {
           <img
             src={streamersPhoto}
             style={{ width: "22px", height: "22px", borderRadius: "100%" }}
+            alt="streamers photo dummy"
           />
           <span className="ml-2 text-white" style={{ fontSize: "8px" }}>
             bekyamon

@@ -8,6 +8,7 @@ function GamesCardMobile({ title, streamersOnline, genre, image, slug }) {
         <img
           src={image}
           style={{ width: "80px", height: "100px", objectFit: "cover" }}
+          alt="dummy photo"
         />
         <div className="flex flex-col ml-3">
           <h2 className="text-white ">{title}</h2>

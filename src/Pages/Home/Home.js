@@ -160,7 +160,19 @@ function Home() {
                 Live Stream Now
               </span>
             </div>
-            <div className="grid grid-cols-3 mt-10">
+            <div className="grid grid-cols-3 gap-5 mt-10">
+              <StreamingThumbnail
+                channelLogo={Bakreyon}
+                thumbnail={Thumbnail}
+                title={"MCC RISING TRAINING #1"}
+                channelName={"bakyomon"}
+              />
+              <StreamingThumbnail
+                channelLogo={Bakreyon}
+                thumbnail={Thumbnail}
+                title={"MCC RISING TRAINING #1"}
+                channelName={"bakyomon"}
+              />
               <StreamingThumbnail
                 channelLogo={Bakreyon}
                 thumbnail={Thumbnail}
@@ -205,7 +217,58 @@ function Home() {
               </div>
             </div>
           </section>
-          <section></section>
+          <section className="px-5 mt-10" data-aos="fade-up">
+            <div className="flex flex-row ">
+              <span className="text-xl font-bold text-white">
+                Mobile Legends
+              </span>
+            </div>
+            <div className="grid grid-cols-3 gap-5 mt-10">
+              <StreamingThumbnail
+                channelLogo={Bakreyon}
+                thumbnail={Thumbnail}
+                title={"MCC RISING TRAINING #1"}
+                channelName={"bakyomon"}
+              />
+              <StreamingThumbnail
+                channelLogo={Bakreyon}
+                thumbnail={Thumbnail}
+                title={"MCC RISING TRAINING #1"}
+                channelName={"bakyomon"}
+              />
+              <StreamingThumbnail
+                channelLogo={Bakreyon}
+                thumbnail={Thumbnail}
+                title={"MCC RISING TRAINING #1"}
+                channelName={"bakyomon"}
+              />
+            </div>
+          </section>
+          <section className="px-5 mt-10" data-aos="fade-up">
+            <div className="flex flex-row ">
+              <span className="text-xl font-bold text-white">Valorant</span>
+            </div>
+            <div className="grid grid-cols-3 gap-5 mt-10">
+              <StreamingThumbnail
+                channelLogo={Bakreyon}
+                thumbnail={Thumbnail}
+                title={"MCC RISING TRAINING #1"}
+                channelName={"bakyomon"}
+              />
+              <StreamingThumbnail
+                channelLogo={Bakreyon}
+                thumbnail={Thumbnail}
+                title={"MCC RISING TRAINING #1"}
+                channelName={"bakyomon"}
+              />
+              <StreamingThumbnail
+                channelLogo={Bakreyon}
+                thumbnail={Thumbnail}
+                title={"MCC RISING TRAINING #1"}
+                channelName={"bakyomon"}
+              />
+            </div>
+          </section>
           <section className="h-20"></section>
         </main>
       </div>

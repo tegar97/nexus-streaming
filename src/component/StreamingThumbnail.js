@@ -23,6 +23,7 @@ function StreamingThumbnail({ thumbnail, channelName, title, channelLogo }) {
           <img
             src={thumbnail}
             style={{ borderRadius: "19px", width: "100%" }}
+            alt="thumbnail photo"
           />
 
           <div
@@ -31,7 +32,7 @@ function StreamingThumbnail({ thumbnail, channelName, title, channelLogo }) {
           ></div>
         </div>
         <div className="flex flex-row mt-5">
-          <img src={channelLogo} className="rounded-full" />
+          <img src={channelLogo} className="rounded-full" alt="logo dummy" />
           <div className="flex flex-col ml-5">
             <span className="font-bold text-white ">{title}</span>
 

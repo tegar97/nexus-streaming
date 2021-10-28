@@ -1,4 +1,5 @@
 import LiveChat from "component/LiveChat";
+import NavbarMobile from "component/NavbarMobile";
 import React from "react";
 import ReactPlayer from "react-player";
 import { useMediaQuery } from "react-responsive";

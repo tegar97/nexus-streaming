@@ -9,8 +9,7 @@ function LiveChat() {
   const dummyChat = [
     {
       name: "Jonathan Tambuh",
-      message:
-        " ohh ternyata beneran ga ada. makasih Jonathan salam buat ibumu",
+      message: "Hello Ninja",
       photo: DummyProfile,
     },
     {

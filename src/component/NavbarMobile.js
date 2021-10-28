@@ -70,47 +70,51 @@ function NavbarMobile() {
           </span>{" "}
         </div>
 
-        <div className="flex flex-col items-center cursor-pointer">
-          <Trending
-            className={` ${
-              location.pathname === "/trending"
-                ? "fill-purple-600"
-                : "fill-white opacity-50"
-            }`}
-            style={{ width: "25px", height: "25px" }}
-          />
-          <span
-            className={`text-sm font-bold ${
-              location.pathname !== "/trending" && "opacity-50"
-            }`}
-            style={{
-              color: location.pathname === "/trending" ? " #9747FF" : "white",
-            }}
-          >
-            Trending
-          </span>{" "}
-        </div>
-
-        <div className="flex flex-col items-center cursor-pointer">
-          <UserActive
-            className={` ${
-              location.pathname === "/login"
-                ? "fill-purple-600"
-                : "fill-white opacity-50"
-            }`}
-            style={{ width: "25px", height: "25px" }}
-          />
-          <span
-            className={`text-sm font-bold ${
-              location.pathname !== "/login" && "opacity-50"
-            }`}
-            style={{
-              color: location.pathname === "/login" ? " #9747FF" : "white",
-            }}
-          >
-            Account
-          </span>{" "}
-        </div>
+        <Link to="/trending">
+          <div className="flex flex-col items-center cursor-pointer">
+            <Trending
+              className={` ${
+                location.pathname === "/trending"
+                  ? "fill-purple-600"
+                  : "fill-white opacity-50"
+              }`}
+              style={{ width: "25px", height: "25px" }}
+            />
+            <span
+              className={`text-sm font-bold ${
+                location.pathname !== "/trending" && "opacity-50"
+              }`}
+              style={{
+                color: location.pathname === "/trending" ? " #9747FF" : "white",
+              }}
+            >
+              Trending
+            </span>{" "}
+          </div>
+        </Link>
+        <Link to="/authMobile">
+          <div className="flex flex-col items-center cursor-pointer">
+            <UserActive
+              className={` ${
+                location.pathname === "/authMobile"
+                  ? "fill-purple-600"
+                  : "fill-white opacity-50"
+              }`}
+              style={{ width: "25px", height: "25px" }}
+            />
+            <span
+              className={`text-sm font-bold ${
+                location.pathname !== "/authMobile" && "opacity-50"
+              }`}
+              style={{
+                color:
+                  location.pathname === "/authMobile" ? " #9747FF" : "white",
+              }}
+            >
+              Account
+            </span>{" "}
+          </div>
+        </Link>
       </div>
     </div>
   );

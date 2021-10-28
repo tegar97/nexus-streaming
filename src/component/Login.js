@@ -8,7 +8,7 @@ function Login() {
       <div className="flex flex-col mt-5">
         <labe className="font-bold text-white">Username</labe>
         <input
-          className="px-2 py-2 mt-2 text-white bg-gray-600 outline-none focus:border-2 focus::border-purple-600"
+          className="px-2 py-2 mt-2 text-white duration-300 bg-gray-600 border-2 border-opacity-0 outline-none focus:border-opacity-100 focus:border-purple-600 focus: formInput"
           style={{ background: "#262837" }}
           onChange={(e) => setUserName(e.target.value)}
         />
@@ -17,7 +17,7 @@ function Login() {
         <labe className="font-bold text-white">Password</labe>
         <input
           type="password"
-          className="px-2 py-2 mt-2 text-white bg-gray-600 outline-none "
+          className="px-2 py-2 mt-2 text-white duration-300 bg-gray-600 border-2 border-opacity-0 outline-none focus:border-opacity-100 focus:border-purple-600 focus: formInput"
           style={{ background: "#262837" }}
           onChange={(e) => setPassword(e.target.value)}
         />

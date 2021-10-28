@@ -6,9 +6,12 @@ import { ReactComponent as Eyes } from "assets/eyes.svg";
 import { ReactComponent as Back } from "assets/back.svg";
 import CategoryGameCard from "component/CategoryGameCard";
 import { Link } from "react-router-dom";
+import NavbarMobile from "component/NavbarMobile";
 function CategoryMobile({ gameData }) {
   return (
     <div className="w-full h-full bg-black-500">
+      <NavbarMobile />
+
       <section>
         <div className="relative category-header-video group">
           <Link to="/">

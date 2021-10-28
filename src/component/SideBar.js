@@ -29,20 +29,21 @@ function SideBar({ isMinimaze, minimazeSideBarFunction }) {
             </div>
           </Link>
 
-          <button className="ml-5 " onClick={() => minimazeSideBarFunction(50)}>
-            <Collapse />
-          </button>
+          <Collapse
+            className="ml-5 "
+            onClick={() => minimazeSideBarFunction(50)}
+          />
         </div>
 
         <div className="flex mt-10 ">
           <ul>
-            <Link to="/">
-              <li
-                className={`flex flex-row items-center  ${
-                  location.pathname === "/" && "bg-purple-600 px-2 py-1"
-                }  rounded-md cursor-pointer `}
-                style={{ width: "184px" }}
-              >
+            <li
+              className={`  ${
+                location.pathname === "/" && "bg-purple-600 px-2 py-1"
+              }  rounded-md cursor-pointer `}
+              style={{ width: "184px" }}
+            >
+              <Link to="/" className="flex flex-row items-center ">
                 <Home
                   className={
                     location.pathname === "/" ? "fill-white" : "fill-gray-400"
@@ -56,15 +57,16 @@ function SideBar({ isMinimaze, minimazeSideBarFunction }) {
                 >
                   Home
                 </span>
-              </li>
-            </Link>
-            <Link to="/games">
-              <li
-                className={`flex flex-row items-center  ${
-                  location.pathname === "/games" && "bg-purple-600 px-2 py-1"
-                }  rounded-md cursor-pointer `}
-                style={{ marginTop: "24px" }}
-              >
+              </Link>
+            </li>
+
+            <li
+              className={`  ${
+                location.pathname === "/games" && "bg-purple-600 px-2 py-1"
+              }  rounded-md cursor-pointer `}
+              style={{ marginTop: "24px" }}
+            >
+              <Link to="/games" className="flex flex-row items-center">
                 <Games
                   className={
                     location.pathname === "/games"
@@ -82,22 +84,22 @@ function SideBar({ isMinimaze, minimazeSideBarFunction }) {
                 >
                   Games
                 </span>
-              </li>
-            </Link>
+              </Link>
+            </li>
             <li
               style={{ marginTop: "26px" }}
-              className={`flex flex-row items-center  ${
+              className={`  ${
                 location.pathname === "/trending" && "bg-purple-600 px-2 py-1 "
               }  rounded-md cursor-pointer `}
             >
-              <Trending
-                className={
-                  location.pathname === "/trending"
-                    ? "fill-white"
-                    : "fill-gray-400"
-                }
-              />
-              <Link to="/trending">
+              <Link to="/trending" className="flex flex-row items-center">
+                <Trending
+                  className={
+                    location.pathname === "/trending"
+                      ? "fill-white"
+                      : "fill-gray-400"
+                  }
+                />
                 <span
                   className={`ml-4 ${
                     location.pathname === "/trending"
@@ -108,12 +110,6 @@ function SideBar({ isMinimaze, minimazeSideBarFunction }) {
                   Trending
                 </span>
               </Link>
-            </li>
-            <li style={{ marginTop: "26px" }} className="flex cursor-pointer ">
-              <User className=" fill-gray-400" />
-              <span className="ml-4 text-gray-400 duration-200 transation hover:text-white">
-                Following
-              </span>
             </li>
           </ul>
         </div>
@@ -137,13 +133,16 @@ function SideBar({ isMinimaze, minimazeSideBarFunction }) {
         <div className="flex items-center mt-10 ">
           <ul>
             <li className="flex flex-row items-center rounded-md cursor-pointer">
-              <Home className="fill-purple-600" />
+              <Link>
+                <Home className="fill-purple-600" />
+              </Link>
+            </li>
+
+            <li style={{ marginTop: "26px" }} className="flex cursor-pointer ">
+              <Games className=" fill-gray-400" />
             </li>
             <li style={{ marginTop: "26px" }} className="flex cursor-pointer ">
               <Trending className=" fill-gray-400" />
-            </li>
-            <li style={{ marginTop: "26px" }} className="flex cursor-pointer ">
-              <User className=" fill-gray-400" />
             </li>
           </ul>
         </div>

@@ -9,6 +9,7 @@ import Channels from "Pages/Channels/Channels";
 import ScrollTop from "helper/ScrollTop";
 import AllGames from "Pages/AllGames/AllGame";
 import Trending from "Pages/Trending/Trending";
+import AuthMobile from "Pages/AuthMobile/AuthMobile";
 function App() {
   return (
     <Router>
@@ -31,6 +32,9 @@ function App() {
         </Route>
         <Route path="/channels/:slug">
           <Channels />
+        </Route>
+        <Route path="/authMobile">
+          <AuthMobile />
         </Route>
         <Route path="/">
           <Home />
